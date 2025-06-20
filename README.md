@@ -1,2 +1,1 @@
-# FlaskDailyCluePuzzle
-FlaskDailyCluePuzzle
+# Python Flask project

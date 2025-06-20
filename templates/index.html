@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+<body>
+
+    <h1>Flask Daily Clue Puzzle</h1>
+  <p>
+    
+
+  <table border="1" cellpadding="5" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Suspects</th>
+      <th>Weapons</th>
+      <th>Locations</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Alice</td>
+      <td>Dagger</td>
+      <td>Store</td>
+    </tr>
+    <tr>
+      <td>Bob</td>
+      <td>Gun</td>
+      <td>Library</td>
+    </tr>
+    <tr>
+      <td>Carol</td>
+      <td>Rope</td>
+      <td>Theater</td>
+    </tr>
+    <tr>
+      <td>Eddie</td>
+      <td>Knife</td>
+      <td>Museum</td>
+    </tr>
+  </tbody>
+</table>
+    </p>
+
+  <form method="post" action="/">
+   <input type="submit" name="button1" value="Get A Clue" />
+  </form>
+  {% if clues %}
+  <p>Your clue is: <u>{{ clues }}</u></p>
+  {% endif %}
+    <p>There have been {{ now }} clues given.</p>
+  
+  <form method="post" action="/result">
+      <p>
+        Who is the murderer?
+      </p>
+    <select name="suspect" id="suspect">
+      <option value="">[select a person]</option>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="mercedes">Mercedes</option>
+  <option value="audi">Audi</option>
+</select>
+    with the 
+<select name="weapon" id="weapon">
+  <option value="">[select a weapon]</option>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="mercedes">Mercedes</option>
+  <option value="audi">Audi</option>
+</select>
+    in the
+    <select name="location" id="location">
+      <option value="">[select a location]</option>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="mercedes">Mercedes</option>
+  <option value="audi">Audi</option>
+</select>
+        <input type="submit" name="button2" value="Make A Guess" />
+      
+</form>
+
+</body>
+</html>
